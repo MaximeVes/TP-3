@@ -1,5 +1,5 @@
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         // Déclaration, Initialisation, Instanciation
         Data d = new Data(0);
         Thread t1 = new Thread(new Operation('+', d));
@@ -9,10 +9,7 @@ public class Main {
         t1.start();
         t2.start();
         while (t1.isAlive() && t2.isAlive()) {
-            try {
                 Thread.sleep(10);
-            } catch (Exception e) {
-            }
         }
         System.out.println("[Valeur Finale] = " + d.getNombre());
     }
