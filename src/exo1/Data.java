@@ -1,3 +1,5 @@
+package exo1;
+
 public class Data {
     // Attributs
     public int nombre;

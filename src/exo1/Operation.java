@@ -1,3 +1,5 @@
+package exo1;
+
 public class Operation implements Runnable {
 
     // Attributs
